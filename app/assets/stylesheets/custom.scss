@@ -52,20 +52,106 @@ p {
 
 /* ヘッダー */
 
+#header {
+  background-color: teal;
+}
+
 #logo {
+  font-family: sans-serif;
+  font-style: italic;
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
   color: #fff;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
 }
 
 #logo:hover {
-  color: #fff;
+  color: #a9a9a9;
   text-decoration: none;
+}
+
+#root {
+  font-size: 1.2em;
+  color: #fff;
+  font-weight: bold;
+}
+
+#login {
+  font-size: 1.2em;
+  color: #fff;
+  font-weight: bold;
+}
+
+#root:hover {
+  color: #a9a9a9;
+}
+
+#login:hover {
+  color: #a9a9a9;
+}
+
+#user-list {
+  font-size: 1.2em;
+  color: #fff;
+  font-weight: bold;
+}
+
+#task-new {
+  font-size: 1.2em;
+  color: #fff;
+  font-weight: bold;
+}
+
+#user-list:hover {
+  color: #a9a9a9;
+}
+
+#task-new:hover {
+  color: #a9a9a9;
+}
+
+#profile {
+  font-size: 1.2em;
+  color: black;
+  font-weight: bold;
+}
+
+#setting {
+  font-size: 1.2em;
+  color: black;
+  font-weight: bold;
+}
+
+#task-list {
+  font-size: 1.2em;
+  color: black;
+  font-weight: bold;
+}
+
+#logout {
+  font-size: 1.2em;
+  color: black;
+  font-weight: bold;
+}
+
+#profile:hover {
+  background-color: #a9a9a9;
+}
+
+#swetting:hover {
+  background-color: #a9a9a9;
+}
+
+#task-list:hover {
+  background-color: #a9a9a9;
+}
+
+#logout:hover {
+  background-color: #a9a9a9;
 }
 
 /* デバッグウインドウ */
