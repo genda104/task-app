@@ -16,10 +16,12 @@ User.create!( name: "管理者",
                password_confirmation: password)
 end
 
-30.times do |n|
-  name = "タスク#{n+1}"
+30.times do |m|
+  name = "タスク#{m+1}"
+  content = "タスク詳細"
   user_id = 1
   Task.create!(name: name,
+               content: content,
                user_id: user_id,
               )
 end
