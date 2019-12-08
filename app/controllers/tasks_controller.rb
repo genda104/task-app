@@ -1,8 +1,15 @@
 class TasksController < ApplicationController
-#  before_action :set_user
+  before_action :set_user
   
   def index
-    @tasks = Task.all
+    @tasks = @user.tasks
+  end
+  
+  def show
+  end
+  
+  def new
+    
   end
   
   private
