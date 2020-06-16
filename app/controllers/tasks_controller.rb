@@ -46,7 +46,7 @@ class TasksController < ApplicationController
   def task_params
     params.require(:task).permit(:name, :description)
   end
-  
+
   def set_user
     @user = User.find(params[:user_id])
   end
@@ -54,5 +54,4 @@ class TasksController < ApplicationController
   def set_task
     @task = @user.tasks.find_by(id: params[:id])
   end
-  
 end
