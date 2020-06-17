@@ -1,6 +1,8 @@
 class TasksController < ApplicationController
   before_action :set_user
-  before_action :set_task
+  before_action :set_task, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user
+  before_action :correct_user  
   
   def index
     @tasks = @user.tasks
@@ -43,15 +45,18 @@ class TasksController < ApplicationController
   
   private
   
-  def task_params
-    params.require(:task).permit(:name, :description)
-  end
-
-  def set_user
-    @user = User.find(params[:user_id])
-  end
-  
-  def set_task
-    @task = @user.tasks.find_by(id: params[:id])
-  end
+    def task_params
+      params.require(:task).permit(:name, :description)
+    end
+    
+    def set_user
+      @user = User.find(params[:user_id])
+    end
+    
+    def set_task
+      unless @task = @user.tasks.find_by(id: params[:id])
+        flash[:danger] = "権限がありません。"
+        redirect_to user_tasks_url @user
+      end    
+    end
 end
